@@ -1,39 +1,187 @@
 body {
-    background-color: #DCE1E3;
+    background-color: #222;
+    color: cyan;
+
+    font-weight: 400;
 }
 
 h1 {
     text-align: center;
+    font-size: 30px;
+}
+
+.title p {
+  text-align: center;
+}
+
+#intro {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+.text {
+  float: left;
+  display: flex;
+  flex-direction: column;
 }
 
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-   
-  }
+header {
+  background-color: #55d6aa;
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #111;
-  }
+}
+header::after {
+  content: '';
+  display: table;
+  clear: both;
 
-  img {
-      max-width: 20%;
-      height: auto;
-  }
+}
+
+.navbar {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.Logo {
+  float: left;
+  width: 15%;
+  height: auto;
+  padding: 10px 0;
+  
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 25px;
+
+  position: relative;
+
+}
+
+
+#intro img {
+  width: 200px;
+  float: right;
+  clip-path: circle();
+
+}
+
+nav ul li a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #000;
+
+
+}
+
+nav ul li a::before {
+  content: '';
+  display:  block;
+  height: 5px;
+  width: 100%;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-out 250ms;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  
+  background:  #0a2a43;
+  min-height: 1500px;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index:  10000;
+}
+
+
+section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: #0a2a43;
+    z-index:  10000;  
+    mix-blend-mode: color;
+
+}
+
+#Lorem {
+  position: relative;
+  color: #fff;
+  font-size: 8em;
+  z-index: 1;
+}
+
+
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+
+
+}
+
+#road {
+  z-index: 2;
+}
+
+#Anime {
+  padding-top: 50%;
+  
+  
+}
+  
